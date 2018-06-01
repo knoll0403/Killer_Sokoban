@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI">
+   <children>
+      <Button fx:id="playButton" layoutX="257.0" layoutY="218.0" mnemonicParsing="false" onAction="#playButtonHandle" prefHeight="45.0" prefWidth="126.0" style="-fx-background-color: #2196F3;" text="Play" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="quitButton" layoutX="285.0" layoutY="284.0" mnemonicParsing="false" onAction="#quitButtonHandle" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #151928;" text="Quit" textFill="WHITE" />
+      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="196.0" layoutY="138.0" prefHeight="55.0" prefWidth="248.0" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

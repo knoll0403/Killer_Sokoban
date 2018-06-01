@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI">
+   <children>
+      <HBox prefHeight="41.0" prefWidth="600.0">
+         <children>
+            <Label text="Select map">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="36.0" prefWidth="600.0">
+         <children>
+            <ComboBox fx:id="mapSelect" prefWidth="150.0" visibleRowCount="3">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="600.0">
+         <children>
+            <Label text="Select players">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox prefHeight="360.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Pane prefHeight="28.0" prefWidth="269.0" />
+                  <Label prefHeight="27.0" prefWidth="31.0" text="↑">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="38.0" text="←">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="29.0" text="↓">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="33.0" text="→">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="32.0" text="H">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="O">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="   Strength">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <Pane prefHeight="39.0" prefWidth="54.0" />
+                  <ImageView fx:id="picture0" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker0.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName0" promptText="Name" text="player1" />
+                  <Button fx:id="up0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up0ButtonHandle" text="W" />
+                  <Button fx:id="left0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left0ButtonHandle" text="A" />
+                  <Button fx:id="down0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down0ButtonHandle" text="S" />
+                  <Button fx:id="right0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right0ButtonHandle" text="D" />
+                  <Button fx:id="honey0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey0ButtonHandle" text="H" />
+                  <Button fx:id="oil0Button" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil0ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength0Box" prefHeight="25.0" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active1" mnemonicParsing="false" onAction="#active1Handle" text="Active" />
+                  <ImageView fx:id="picture1" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker1.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName1" disable="true" promptText="Name" text="player2" />
+                  <Button fx:id="up1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up1ButtonHandle" text="W" />
+                  <Button fx:id="left1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left1ButtonHandle" text="A" />
+                  <Button fx:id="down1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down1ButtonHandle" text="S" />
+                  <Button fx:id="right1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right1ButtonHandle" text="D" />
+                  <Button fx:id="honey1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey1ButtonHandle" text="H" />
+                  <Button fx:id="oil1Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil1ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength1Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active2" mnemonicParsing="false" onAction="#active2Handle" text="Active" />
+                  <ImageView fx:id="picture2" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker2.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName2" disable="true" promptText="Name" text="player3" />
+                  <Button fx:id="up2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up2ButtonHandle" text="W" />
+                  <Button fx:id="left2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left2ButtonHandle" text="A" />
+                  <Button fx:id="down2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down2ButtonHandle" text="S" />
+                  <Button fx:id="right2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right2ButtonHandle" text="D" />
+                  <Button fx:id="honey2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey2ButtonHandle" text="H" />
+                  <Button fx:id="oil2Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil2ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength2Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active3" mnemonicParsing="false" onAction="#active3Handle" text="Active" />
+                  <ImageView fx:id="picture3" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker3.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName3" disable="true" promptText="Name" text="player4" />
+                  <Button fx:id="up3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up3ButtonHandle" text="W" />
+                  <Button fx:id="left3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left3ButtonHandle" text="A" />
+                  <Button fx:id="down3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down3ButtonHandle" text="S" />
+                  <Button fx:id="right3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right3ButtonHandle" text="D" />
+                  <Button fx:id="honey3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey3ButtonHandle" text="H" />
+                  <Button fx:id="oil3Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil3ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength3Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active4" mnemonicParsing="false" onAction="#active4Handle" text="Active" />
+                  <ImageView fx:id="picture4" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker4.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName4" disable="true" promptText="Name" text="player5" />
+                  <Button fx:id="up4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up4ButtonHandle" text="W" />
+                  <Button fx:id="left4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left4ButtonHandle" text="A" />
+                  <Button fx:id="down4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down4ButtonHandle" text="S" />
+                  <Button fx:id="right4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right4ButtonHandle" text="D" />
+                  <Button fx:id="honey4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey4ButtonHandle" text="H" />
+                  <Button fx:id="oil4Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil4ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength4Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active5" mnemonicParsing="false" onAction="#active5Handle" text="Active" />
+                  <ImageView fx:id="picture5" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker5.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName5" disable="true" promptText="Name" text="player6" />
+                  <Button fx:id="up5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up5ButtonHandle" text="W" />
+                  <Button fx:id="left5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left5ButtonHandle" text="A" />
+                  <Button fx:id="down5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down5ButtonHandle" text="S" />
+                  <Button fx:id="right5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right5ButtonHandle" text="D" />
+                  <Button fx:id="honey5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey5ButtonHandle" text="H" />
+                  <Button fx:id="oil5Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil5ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength5Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active6" mnemonicParsing="false" onAction="#active6Handle" text="Active" />
+                  <ImageView fx:id="picture6" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker6.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName6" disable="true" promptText="Name" text="player7" />
+                  <Button fx:id="up6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up6ButtonHandle" text="W" />
+                  <Button fx:id="left6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left6ButtonHandle" text="A" />
+                  <Button fx:id="down6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down6ButtonHandle" text="S" />
+                  <Button fx:id="right6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right6ButtonHandle" text="D" />
+                  <Button fx:id="honey6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey6ButtonHandle" text="H" />
+                  <Button fx:id="oil6Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil6ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength6Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <CheckBox fx:id="active7" mnemonicParsing="false" onAction="#active7Handle" text="Active" />
+                  <ImageView fx:id="picture7" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/worker7.png" />
+                     </image></ImageView>
+                  <TextField fx:id="playerName7" disable="true" promptText="Name" text="player8" />
+                  <Button fx:id="up7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#up7ButtonHandle" text="W" />
+                  <Button fx:id="left7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#left7ButtonHandle" text="A" />
+                  <Button fx:id="down7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#down7ButtonHandle" text="S" />
+                  <Button fx:id="right7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#right7ButtonHandle" text="D" />
+                  <Button fx:id="honey7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#honey7ButtonHandle" text="H" />
+                  <Button fx:id="oil7Button" disable="true" maxHeight="25.0" minHeight="25.0" minWidth="28.0" mnemonicParsing="false" onAction="#oil7ButtonHandle" text="O" />
+                  <ComboBox fx:id="strength7Box" disable="true" prefWidth="70.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="109.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonHandle" text="Back" />
+            <Button fx:id="startButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#startButtonHandle" text="Start" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
